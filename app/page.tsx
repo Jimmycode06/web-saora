@@ -25,40 +25,37 @@ export default function SaoraLanding() {
   }, []);
 
   const sounds = [
-    { icon: Waves, name: "Océans", description: "Vagues apaisantes" },
-    { icon: CloudRain, name: "Pluie", description: "Pluie douce et relaxante" },
-    { icon: Mountain, name: "Ambiance", description: "Atmosphère de montagne" },
-    { icon: Moon, name: "Sommeil", description: "Rêves paisibles" },
+    { icon: Waves, name: "Oceans", description: "Soothing waves" },
+    { icon: CloudRain, name: "Rain", description: "Gentle and relaxing rain" },
+    { icon: Mountain, name: "Ambience", description: "Mountain atmosphere" },
+    { icon: Moon, name: "Sleep", description: "Peaceful dreams" },
   ];
 
   const privacyData = [
     {
       icon: Shield,
-      title: "Protection des Données",
-      description:
-        "Vos données personnelles sont chiffrées et stockées de manière sécurisée",
+      title: "Data Protection",
+      description: "Your personal data is encrypted and stored securely",
     },
     {
       icon: Eye,
-      title: "Aucun Tracking",
-      description:
-        "Nous ne suivons pas votre activité en dehors de l'application",
+      title: "No Tracking",
+      description: "We don&apos;t track your activity outside the app",
     },
     {
       icon: Lock,
-      title: "Données Locales",
-      description:
-        "Vos préférences sont stockées localement sur votre appareil",
+      title: "Local Data",
+      description: "Your preferences are stored locally on your device",
     },
   ];
 
   const features = [
-    "Plus de 50 sons naturels haute qualité",
-    "Mélangez plusieurs sons simultanément",
-    "Timer de sommeil personnalisable",
-    "Interface intuitive et élégante",
-    "Mode hors ligne disponible",
-    "Nouveaux sons ajoutés régulièrement",
+    "Over 50 high-quality natural sounds",
+    "Mix multiple sounds simultaneously",
+    "Customizable sleep timer",
+    "Intuitive and elegant interface",
+    "Offline mode available",
+    "New sounds added regularly",
   ];
 
   return (
@@ -82,7 +79,7 @@ export default function SaoraLanding() {
             </span>
           </div>
           <button className="px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-            Télécharger
+            Download
           </button>
         </nav>
       </header>
@@ -98,17 +95,17 @@ export default function SaoraLanding() {
             }`}
           >
             <h1 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent leading-tight">
-              Trouvez Votre
+              Find Your
               <br />
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Sérénité
+                Serenity
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 mb-12 max-w-2xl mx-auto leading-relaxed">
-              Plongez dans un univers de sons naturels apaisants. Méditation,
-              sommeil, focus -
-              <span className="text-blue-300 font-semibold"> Saora</span>{" "}
-              transforme votre quotidien.
+              Immerse yourself in a world of soothing natural sounds.
+              Meditation, sleep, focus -{" "}
+              <span className="text-blue-300 font-semibold">Saora</span>{" "}
+              transforms your daily life.
             </p>
           </div>
 
@@ -152,7 +149,7 @@ export default function SaoraLanding() {
               {activeSound !== null && (
                 <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg animate-bounce">
                   <Play className="w-4 h-4 inline mr-2" />
-                  En cours...
+                  Playing...
                 </div>
               )}
             </div>
@@ -172,7 +169,7 @@ export default function SaoraLanding() {
             </button>
             <button className="px-8 py-4 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 font-semibold text-lg hover:bg-white/20 transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-3">
               <Play className="w-6 h-6" />
-              <span>Découvrir</span>
+              <span>Discover</span>
             </button>
           </div>
         </div>
@@ -183,11 +180,11 @@ export default function SaoraLanding() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-              Une Expérience Unique
+              A Unique Experience
             </h2>
             <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-              Découvrez pourquoi des milliers d&apos;utilisateurs font confiance
-              à Saora pour leur bien-être quotidien
+              Discover why thousands of users trust Saora for their daily
+              well-being
             </p>
           </div>
 
@@ -217,10 +214,10 @@ export default function SaoraLanding() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-              Sons Naturels
+              Natural Sounds
             </h2>
             <p className="text-xl text-blue-100">
-              Explorez notre collection de sons haute qualité
+              Explore our collection of high-quality sounds
             </p>
           </div>
 
@@ -247,7 +244,7 @@ export default function SaoraLanding() {
                   {activeSound === index && (
                     <div className="mt-4 flex items-center text-blue-400 font-medium animate-pulse">
                       <Play className="w-4 h-4 mr-2" />
-                      Écoute en cours
+                      Now Playing
                     </div>
                   )}
                 </div>
@@ -262,11 +259,11 @@ export default function SaoraLanding() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-              Votre Confidentialité d&apos;Abord
+              Your Privacy First
             </h2>
             <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-              Chez Saora, nous respectons votre vie privée et protégeons vos
-              données avec le plus grand soin
+              At Saora, we respect your privacy and protect your data with the
+              utmost care
             </p>
           </div>
 
@@ -296,28 +293,28 @@ export default function SaoraLanding() {
               className="px-8 py-4 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 font-semibold hover:bg-white/20 transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-3 mx-auto"
             >
               <FileText className="w-5 h-5" />
-              <span>Lire la Politique Complète</span>
+              <span>Read Full Policy</span>
             </button>
           </div>
         </div>
       </section>
+
+      {/* CTA Section */}
       <section className="relative z-10 px-6 py-20">
         <div className="max-w-4xl mx-auto text-center">
           <div className="p-12 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl border border-white/10 shadow-2xl">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-              Commencez Votre Voyage
+              Start Your Journey
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Rejoignez la communauté Saora et découvrez le pouvoir des sons
-              naturels pour transformer votre bien-être
+              Join the Saora community and discover the power of natural sounds
+              to transform your well-being
             </p>
             <button className="group px-12 py-5 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full font-bold text-xl shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-4 mx-auto">
               <Download className="w-7 h-7 group-hover:animate-bounce" />
-              <span>Télécharger Maintenant</span>
+              <span>Download Now</span>
             </button>
-            <p className="text-sm text-blue-300 mt-4">
-              Gratuit sur l&apos;App Store
-            </p>
+            <p className="text-sm text-blue-300 mt-4">Free on the App Store</p>
           </div>
         </div>
       </section>
@@ -334,18 +331,18 @@ export default function SaoraLanding() {
             </span>
           </div>
           <p className="text-blue-200 mb-4">
-            Votre compagnon pour la relaxation et le bien-être
+            Your companion for relaxation and well-being
           </p>
           <div className="flex justify-center space-x-6 mb-4">
             <button
               onClick={() => setShowPrivacyModal(true)}
               className="text-blue-300 hover:text-blue-200 transition-colors text-sm"
             >
-              Politique de Confidentialité
+              Privacy Policy
             </button>
             <span className="text-blue-400">•</span>
             <button className="text-blue-300 hover:text-blue-200 transition-colors text-sm">
-              Conditions d&apos;Utilisation
+              Terms of Use
             </button>
             <span className="text-blue-400">•</span>
             <button className="text-blue-300 hover:text-blue-200 transition-colors text-sm">
@@ -353,7 +350,7 @@ export default function SaoraLanding() {
             </button>
           </div>
           <p className="text-blue-300 text-sm">
-            © 2024 Saora. Tous droits réservés.
+            © 2024 Saora. All rights reserved.
           </p>
         </div>
       </footer>
@@ -369,10 +366,10 @@ export default function SaoraLanding() {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white">
-                    Politique de Confidentialité
+                    Privacy Policy
                   </h3>
                   <p className="text-blue-200 text-sm">
-                    Dernière mise à jour : Juin 2025
+                    Last updated: June 2025
                   </p>
                 </div>
               </div>
@@ -387,82 +384,74 @@ export default function SaoraLanding() {
             <div className="p-8 overflow-y-auto max-h-[calc(90vh-200px)] text-blue-100 space-y-6">
               <div>
                 <h4 className="text-xl font-semibold text-white mb-3">
-                  1. Collecte des Données
+                  1. Data Collection
                 </h4>
                 <p className="leading-relaxed">
-                  Saora collecte uniquement les données nécessaires au
-                  fonctionnement de l&apos;application. Nous ne collectons
-                  aucune donnée personnelle identifiable sans votre consentement
-                  explicite.
+                  Saora only collects data necessary for the app&apos;s
+                  functionality. We do not collect any personally identifiable
+                  information without your explicit consent.
                 </p>
                 <ul className="mt-3 ml-6 space-y-2 list-disc">
-                  <li>Préférences audio et paramètres de l&apos;application</li>
+                  <li>Audio preferences and app settings</li>
+                  <li>Anonymized usage data to improve the experience</li>
+                  <li>Technical device information (iOS version, model)</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="text-xl font-semibold text-white mb-3">
+                  2. Data Usage
+                </h4>
+                <p className="leading-relaxed">
+                  Your data is used exclusively for:
+                </p>
+                <ul className="mt-3 ml-6 space-y-2 list-disc">
+                  <li>Personalizing your listening experience</li>
+                  <li>Saving your preferences and playlists</li>
+                  <li>Improving app performance</li>
+                  <li>Suggesting content tailored to your tastes</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="text-xl font-semibold text-white mb-3">
+                  3. Protection and Security
+                </h4>
+                <p className="leading-relaxed">
+                  We implement advanced security measures:
+                </p>
+                <ul className="mt-3 ml-6 space-y-2 list-disc">
+                  <li>End-to-end encryption of all sensitive data</li>
+                  <li>Priority local storage on your device</li>
                   <li>
-                    Données d&apos;utilisation anonymisées pour améliorer
-                    l&apos;expérience
+                    No sharing with third parties without your authorization
                   </li>
-                  <li>
-                    Informations techniques de l&apos;appareil (version iOS,
-                    modèle)
-                  </li>
+                  <li>Regular security audits</li>
                 </ul>
               </div>
 
               <div>
                 <h4 className="text-xl font-semibold text-white mb-3">
-                  2. Utilisation des Données
+                  4. Your Rights
                 </h4>
                 <p className="leading-relaxed">
-                  Vos données sont utilisées exclusivement pour :
+                  In accordance with GDPR, you have the following rights:
                 </p>
                 <ul className="mt-3 ml-6 space-y-2 list-disc">
-                  <li>Personnaliser votre expérience d&apos;écoute</li>
-                  <li>Sauvegarder vos préférences et playlists</li>
-                  <li>Améliorer les performances de l&apos;application</li>
-                  <li>Vous proposer des contenus adaptés à vos goûts</li>
+                  <li>Right to access your personal data</li>
+                  <li>Right to rectification and deletion</li>
+                  <li>Right to data portability</li>
+                  <li>Right to withdraw your consent at any time</li>
                 </ul>
               </div>
 
               <div>
                 <h4 className="text-xl font-semibold text-white mb-3">
-                  3. Protection et Sécurité
+                  5. Cookies and Trackers
                 </h4>
                 <p className="leading-relaxed">
-                  Nous mettons en œuvre des mesures de sécurité avancées :
-                </p>
-                <ul className="mt-3 ml-6 space-y-2 list-disc">
-                  <li>
-                    Chiffrement de bout en bout de toutes les données sensibles
-                  </li>
-                  <li>Stockage local prioritaire sur votre appareil</li>
-                  <li>Aucun partage avec des tiers sans votre autorisation</li>
-                  <li>Audits de sécurité réguliers</li>
-                </ul>
-              </div>
-
-              <div>
-                <h4 className="text-xl font-semibold text-white mb-3">
-                  4. Vos Droits
-                </h4>
-                <p className="leading-relaxed">
-                  Conformément au RGPD, vous disposez des droits suivants :
-                </p>
-                <ul className="mt-3 ml-6 space-y-2 list-disc">
-                  <li>Droit d&apos;accès à vos données personnelles</li>
-                  <li>Droit de rectification et de suppression</li>
-                  <li>Droit à la portabilité des données</li>
-                  <li>Droit de retirer votre consentement à tout moment</li>
-                </ul>
-              </div>
-
-              <div>
-                <h4 className="text-xl font-semibold text-white mb-3">
-                  5. Cookies et Trackers
-                </h4>
-                <p className="leading-relaxed">
-                  Saora n&apos;utilise aucun cookie de tracking ou de publicité.
-                  Les seules données stockées localement servent uniquement au
-                  fonctionnement de l&apos;application.
+                  Saora does not use any tracking or advertising cookies. The
+                  only locally stored data serves the app&apos;s functionality.
                 </p>
               </div>
 
@@ -471,24 +460,23 @@ export default function SaoraLanding() {
                   6. Contact
                 </h4>
                 <p className="leading-relaxed">
-                  Pour toute question concernant cette politique de
-                  confidentialité ou l&apos;exercice de vos droits,
-                  contactez-nous à :
+                  For any questions regarding this privacy policy or to exercise
+                  your rights, contact us at:
                 </p>
                 <div className="mt-3 p-4 bg-white/5 rounded-xl border border-white/10">
                   <p className="font-semibold text-blue-300">
                     privacy@saora-app.com
                   </p>
                   <p className="text-sm text-blue-200 mt-1">
-                    Nous nous engageons à répondre sous 48h
+                    We commit to responding within 48 hours
                   </p>
                 </div>
               </div>
 
               <div className="pt-6 border-t border-white/10">
                 <p className="text-sm text-blue-300 text-center">
-                  Cette politique peut être mise à jour. Nous vous notifierons
-                  de tout changement important via l&apos;application.
+                  This policy may be updated. We will notify you of any
+                  significant changes through the app.
                 </p>
               </div>
             </div>
