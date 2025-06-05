@@ -17,7 +17,7 @@ import {
 
 export default function SaoraLanding() {
   const [isVisible, setIsVisible] = useState(false);
-  const [activeSound, setActiveSound] = useState(null);
+  const [activeSound, setActiveSound] = useState<number | null>(null);
   const [showPrivacyModal, setShowPrivacyModal] = useState(false);
 
   useEffect(() => {
@@ -186,8 +186,8 @@ export default function SaoraLanding() {
               Une Expérience Unique
             </h2>
             <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-              Découvrez pourquoi des milliers d'utilisateurs font confiance à
-              Saora pour leur bien-être quotidien
+              Découvrez pourquoi des milliers d&apos;utilisateurs font confiance
+              à Saora pour leur bien-être quotidien
             </p>
           </div>
 
@@ -262,7 +262,7 @@ export default function SaoraLanding() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-              Votre Confidentialité d'Abord
+              Votre Confidentialité d&apos;Abord
             </h2>
             <p className="text-xl text-blue-100 max-w-2xl mx-auto">
               Chez Saora, nous respectons votre vie privée et protégeons vos
@@ -316,7 +316,7 @@ export default function SaoraLanding() {
               <span>Télécharger Maintenant</span>
             </button>
             <p className="text-sm text-blue-300 mt-4">
-              Gratuit sur l'App Store
+              Gratuit sur l&apos;App Store
             </p>
           </div>
         </div>
@@ -345,7 +345,7 @@ export default function SaoraLanding() {
             </button>
             <span className="text-blue-400">•</span>
             <button className="text-blue-300 hover:text-blue-200 transition-colors text-sm">
-              Conditions d'Utilisation
+              Conditions d&apos;Utilisation
             </button>
             <span className="text-blue-400">•</span>
             <button className="text-blue-300 hover:text-blue-200 transition-colors text-sm">
@@ -391,18 +391,19 @@ export default function SaoraLanding() {
                 </h4>
                 <p className="leading-relaxed">
                   Saora collecte uniquement les données nécessaires au
-                  fonctionnement de l'application. Nous ne collectons aucune
-                  donnée personnelle identifiable sans votre consentement
+                  fonctionnement de l&apos;application. Nous ne collectons
+                  aucune donnée personnelle identifiable sans votre consentement
                   explicite.
                 </p>
                 <ul className="mt-3 ml-6 space-y-2 list-disc">
-                  <li>Préférences audio et paramètres de l'application</li>
+                  <li>Préférences audio et paramètres de l&apos;application</li>
                   <li>
-                    Données d'utilisation anonymisées pour améliorer
-                    l'expérience
+                    Données d&apos;utilisation anonymisées pour améliorer
+                    l&apos;expérience
                   </li>
                   <li>
-                    Informations techniques de l'appareil (version iOS, modèle)
+                    Informations techniques de l&apos;appareil (version iOS,
+                    modèle)
                   </li>
                 </ul>
               </div>
@@ -415,9 +416,9 @@ export default function SaoraLanding() {
                   Vos données sont utilisées exclusivement pour :
                 </p>
                 <ul className="mt-3 ml-6 space-y-2 list-disc">
-                  <li>Personnaliser votre expérience d'écoute</li>
+                  <li>Personnaliser votre expérience d&apos;écoute</li>
                   <li>Sauvegarder vos préférences et playlists</li>
-                  <li>Améliorer les performances de l'application</li>
+                  <li>Améliorer les performances de l&apos;application</li>
                   <li>Vous proposer des contenus adaptés à vos goûts</li>
                 </ul>
               </div>
@@ -447,7 +448,7 @@ export default function SaoraLanding() {
                   Conformément au RGPD, vous disposez des droits suivants :
                 </p>
                 <ul className="mt-3 ml-6 space-y-2 list-disc">
-                  <li>Droit d'accès à vos données personnelles</li>
+                  <li>Droit d&apos;accès à vos données personnelles</li>
                   <li>Droit de rectification et de suppression</li>
                   <li>Droit à la portabilité des données</li>
                   <li>Droit de retirer votre consentement à tout moment</li>
@@ -459,9 +460,9 @@ export default function SaoraLanding() {
                   5. Cookies et Trackers
                 </h4>
                 <p className="leading-relaxed">
-                  Saora n'utilise aucun cookie de tracking ou de publicité. Les
-                  seules données stockées localement servent uniquement au
-                  fonctionnement de l'application.
+                  Saora n&apos;utilise aucun cookie de tracking ou de publicité.
+                  Les seules données stockées localement servent uniquement au
+                  fonctionnement de l&apos;application.
                 </p>
               </div>
 
@@ -471,8 +472,8 @@ export default function SaoraLanding() {
                 </h4>
                 <p className="leading-relaxed">
                   Pour toute question concernant cette politique de
-                  confidentialité ou l'exercice de vos droits, contactez-nous à
-                  :
+                  confidentialité ou l&apos;exercice de vos droits,
+                  contactez-nous à :
                 </p>
                 <div className="mt-3 p-4 bg-white/5 rounded-xl border border-white/10">
                   <p className="font-semibold text-blue-300">
@@ -487,7 +488,7 @@ export default function SaoraLanding() {
               <div className="pt-6 border-t border-white/10">
                 <p className="text-sm text-blue-300 text-center">
                   Cette politique peut être mise à jour. Nous vous notifierons
-                  de tout changement important via l'application.
+                  de tout changement important via l&apos;application.
                 </p>
               </div>
             </div>
