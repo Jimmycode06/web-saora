@@ -387,14 +387,13 @@ export default function SaoraLanding() {
                   1. Data Collection
                 </h4>
                 <p className="leading-relaxed">
-                  Saora only collects data necessary for the app&apos;s
-                  functionality. We do not collect any personally identifiable
-                  information without your explicit consent.
+                  Saora does not collect any data through the app. We believe in
+                  complete privacy and transparency.
                 </p>
                 <ul className="mt-3 ml-6 space-y-2 list-disc">
-                  <li>Audio preferences and app settings</li>
-                  <li>Anonymized usage data to improve the experience</li>
-                  <li>Technical device information (iOS version, model)</li>
+                  <li>No personal information is collected</li>
+                  <li>No usage data is tracked</li>
+                  <li>No analytics are implemented</li>
                 </ul>
               </div>
 
@@ -403,14 +402,9 @@ export default function SaoraLanding() {
                   2. Data Usage
                 </h4>
                 <p className="leading-relaxed">
-                  Your data is used exclusively for:
+                  Since we don&apos;t collect any data, there is no data usage
+                  to report.
                 </p>
-                <ul className="mt-3 ml-6 space-y-2 list-disc">
-                  <li>Personalizing your listening experience</li>
-                  <li>Saving your preferences and playlists</li>
-                  <li>Improving app performance</li>
-                  <li>Suggesting content tailored to your tastes</li>
-                </ul>
               </div>
 
               <div>
@@ -418,15 +412,13 @@ export default function SaoraLanding() {
                   3. Protection and Security
                 </h4>
                 <p className="leading-relaxed">
-                  We implement advanced security measures:
+                  Your privacy is our top priority:
                 </p>
                 <ul className="mt-3 ml-6 space-y-2 list-disc">
-                  <li>End-to-end encryption of all sensitive data</li>
-                  <li>Priority local storage on your device</li>
-                  <li>
-                    No sharing with third parties without your authorization
-                  </li>
-                  <li>Regular security audits</li>
+                  <li>No data collection means no data to protect</li>
+                  <li>All app functionality works offline</li>
+                  <li>No internet connection required</li>
+                  <li>No third-party services or trackers</li>
                 </ul>
               </div>
 
@@ -435,14 +427,9 @@ export default function SaoraLanding() {
                   4. Your Rights
                 </h4>
                 <p className="leading-relaxed">
-                  In accordance with GDPR, you have the following rights:
+                  Since we don&apos;t collect any data, there are no data rights
+                  to exercise. Your privacy is guaranteed by design.
                 </p>
-                <ul className="mt-3 ml-6 space-y-2 list-disc">
-                  <li>Right to access your personal data</li>
-                  <li>Right to rectification and deletion</li>
-                  <li>Right to data portability</li>
-                  <li>Right to withdraw your consent at any time</li>
-                </ul>
               </div>
 
               <div>
@@ -450,8 +437,8 @@ export default function SaoraLanding() {
                   5. Cookies and Trackers
                 </h4>
                 <p className="leading-relaxed">
-                  Saora does not use any tracking or advertising cookies. The
-                  only locally stored data serves the app&apos;s functionality.
+                  Saora does not use any cookies, trackers, or analytics tools.
+                  The app is completely free of any tracking mechanisms.
                 </p>
               </div>
 
@@ -460,8 +447,8 @@ export default function SaoraLanding() {
                   6. Contact
                 </h4>
                 <p className="leading-relaxed">
-                  For any questions regarding this privacy policy or to exercise
-                  your rights, contact us at:
+                  If you have any questions about our privacy-first approach,
+                  contact us at:
                 </p>
                 <div className="mt-3 p-4 bg-white/5 rounded-xl border border-white/10">
                   <p className="font-semibold text-blue-300">
@@ -475,8 +462,8 @@ export default function SaoraLanding() {
 
               <div className="pt-6 border-t border-white/10">
                 <p className="text-sm text-blue-300 text-center">
-                  This policy may be updated. We will notify you of any
-                  significant changes through the app.
+                  This policy reflects our commitment to complete privacy. We
+                  will notify you of any changes through the app.
                 </p>
               </div>
             </div>
