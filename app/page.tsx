@@ -14,11 +14,11 @@ import {
   Lock,
   FileText,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function SaoraLanding() {
   const [isVisible, setIsVisible] = useState(false);
   const [activeSound, setActiveSound] = useState<number | null>(null);
-  const [showPrivacyModal, setShowPrivacyModal] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
@@ -288,13 +288,13 @@ export default function SaoraLanding() {
           </div>
 
           <div className="text-center">
-            <button
-              onClick={() => setShowPrivacyModal(true)}
+            <Link
+              href="/privacy-policy"
               className="px-8 py-4 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 font-semibold hover:bg-white/20 transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-3 mx-auto"
             >
               <FileText className="w-5 h-5" />
               <span>Read Full Policy</span>
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -334,16 +334,19 @@ export default function SaoraLanding() {
             Your companion for relaxation and well-being
           </p>
           <div className="flex justify-center space-x-6 mb-4">
-            <button
-              onClick={() => setShowPrivacyModal(true)}
+            <Link
+              href="/privacy-policy"
               className="text-blue-300 hover:text-blue-200 transition-colors text-sm"
             >
               Privacy Policy
-            </button>
+            </Link>
             <span className="text-blue-400">•</span>
-            <button className="text-blue-300 hover:text-blue-200 transition-colors text-sm">
+            <Link
+              href="/terms-of-use"
+              className="text-blue-300 hover:text-blue-200 transition-colors text-sm"
+            >
               Terms of Use
-            </button>
+            </Link>
             <span className="text-blue-400">•</span>
             <button className="text-blue-300 hover:text-blue-200 transition-colors text-sm">
               Support
@@ -354,122 +357,6 @@ export default function SaoraLanding() {
           </p>
         </div>
       </footer>
-
-      {/* Privacy Policy Modal */}
-      {showPrivacyModal && (
-        <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-gradient-to-br from-slate-800 to-blue-900 rounded-3xl border border-white/20 max-w-4xl max-h-[90vh] overflow-hidden shadow-2xl">
-            <div className="p-8 border-b border-white/10 flex items-center justify-between">
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-blue-500 rounded-xl flex items-center justify-center">
-                  <Shield className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white">
-                    Privacy Policy
-                  </h3>
-                  <p className="text-blue-200 text-sm">
-                    Last updated: June 2025
-                  </p>
-                </div>
-              </div>
-              <button
-                onClick={() => setShowPrivacyModal(false)}
-                className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors"
-              >
-                <span className="text-white text-xl">×</span>
-              </button>
-            </div>
-
-            <div className="p-8 overflow-y-auto max-h-[calc(90vh-200px)] text-blue-100 space-y-6">
-              <div>
-                <h4 className="text-xl font-semibold text-white mb-3">
-                  1. Data Collection
-                </h4>
-                <p className="leading-relaxed">
-                  Saora does not collect any data through the app. We believe in
-                  complete privacy and transparency.
-                </p>
-                <ul className="mt-3 ml-6 space-y-2 list-disc">
-                  <li>No personal information is collected</li>
-                  <li>No usage data is tracked</li>
-                  <li>No analytics are implemented</li>
-                </ul>
-              </div>
-
-              <div>
-                <h4 className="text-xl font-semibold text-white mb-3">
-                  2. Data Usage
-                </h4>
-                <p className="leading-relaxed">
-                  Since we don&apos;t collect any data, there is no data usage
-                  to report.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="text-xl font-semibold text-white mb-3">
-                  3. Protection and Security
-                </h4>
-                <p className="leading-relaxed">
-                  Your privacy is our top priority:
-                </p>
-                <ul className="mt-3 ml-6 space-y-2 list-disc">
-                  <li>No data collection means no data to protect</li>
-                  <li>All app functionality works offline</li>
-                  <li>No internet connection required</li>
-                  <li>No third-party services or trackers</li>
-                </ul>
-              </div>
-
-              <div>
-                <h4 className="text-xl font-semibold text-white mb-3">
-                  4. Your Rights
-                </h4>
-                <p className="leading-relaxed">
-                  Since we don&apos;t collect any data, there are no data rights
-                  to exercise. Your privacy is guaranteed by design.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="text-xl font-semibold text-white mb-3">
-                  5. Cookies and Trackers
-                </h4>
-                <p className="leading-relaxed">
-                  Saora does not use any cookies, trackers, or analytics tools.
-                  The app is completely free of any tracking mechanisms.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="text-xl font-semibold text-white mb-3">
-                  6. Contact
-                </h4>
-                <p className="leading-relaxed">
-                  If you have any questions about our privacy-first approach,
-                  contact us at:
-                </p>
-                <div className="mt-3 p-4 bg-white/5 rounded-xl border border-white/10">
-                  <p className="font-semibold text-blue-300">
-                    privacy@saora-app.com
-                  </p>
-                  <p className="text-sm text-blue-200 mt-1">
-                    We commit to responding within 48 hours
-                  </p>
-                </div>
-              </div>
-
-              <div className="pt-6 border-t border-white/10">
-                <p className="text-sm text-blue-300 text-center">
-                  This policy reflects our commitment to complete privacy. We
-                  will notify you of any changes through the app.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
