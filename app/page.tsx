@@ -13,6 +13,7 @@ import {
   Eye,
   Lock,
   FileText,
+  HelpCircle,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -78,9 +79,18 @@ export default function SaoraLanding() {
               Saora
             </span>
           </div>
-          <button className="px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-            Download
-          </button>
+          <div className="flex items-center space-x-4">
+            <Link
+              href="/support"
+              className="flex items-center space-x-2 text-blue-200 hover:text-blue-100 transition-colors"
+            >
+              <HelpCircle className="w-5 h-5" />
+              <span>Support</span>
+            </Link>
+            <button className="px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+              Download
+            </button>
+          </div>
         </nav>
       </header>
 

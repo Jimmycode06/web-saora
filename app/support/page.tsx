@@ -1,6 +1,6 @@
 "use client";
 
-import { HelpCircle, Mail, MessageCircle } from "lucide-react";
+import { HelpCircle, Mail } from "lucide-react";
 import Link from "next/link";
 
 export default function Support() {
@@ -28,42 +28,25 @@ export default function Support() {
           </div>
 
           <div className="space-y-8 text-blue-100">
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                <div className="flex items-center space-x-3 mb-4">
-                  <Mail className="w-6 h-6 text-blue-300" />
-                  <h2 className="text-xl font-semibold text-white">
-                    Email Support
-                  </h2>
-                </div>
-                <p className="text-blue-200 mb-4">
-                  For any questions or issues, please contact us at:
-                </p>
-                <a
-                  href="mailto:support@saora-app.com"
-                  className="text-blue-300 hover:text-blue-200 transition-colors"
-                >
-                  support@saora-app.com
-                </a>
-                <p className="text-sm text-blue-200 mt-2">
-                  We typically respond within 24-48 hours
-                </p>
+            <div className="bg-white/5 rounded-xl p-6 border border-white/10">
+              <div className="flex items-center space-x-3 mb-4">
+                <Mail className="w-6 h-6 text-blue-300" />
+                <h2 className="text-xl font-semibold text-white">
+                  Email Support
+                </h2>
               </div>
-
-              <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                <div className="flex items-center space-x-3 mb-4">
-                  <MessageCircle className="w-6 h-6 text-blue-300" />
-                  <h2 className="text-xl font-semibold text-white">
-                    Live Chat
-                  </h2>
-                </div>
-                <p className="text-blue-200 mb-4">
-                  Available Monday to Friday, 9:00 AM - 5:00 PM EST
-                </p>
-                <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors">
-                  Start Chat
-                </button>
-              </div>
+              <p className="text-blue-200 mb-4">
+                For any questions or issues, please contact us at:
+              </p>
+              <a
+                href="mailto:support@saora-app.com"
+                className="text-blue-300 hover:text-blue-200 transition-colors"
+              >
+                support@saora-app.com
+              </a>
+              <p className="text-sm text-blue-200 mt-2">
+                We typically respond within 24-48 hours
+              </p>
             </div>
 
             <div className="mt-12">
