@@ -71,9 +71,9 @@ export default function TermsOfUse() {
                 4. Disclaimer
               </h2>
               <p className="leading-relaxed">
-                Saora is provided "as is" without any warranties, expressed or
-                implied. We do not guarantee that the app will be uninterrupted
-                or error-free.
+                Saora is provided &quot;as is&quot; without any warranties,
+                expressed or implied. We do not guarantee that the app will be
+                uninterrupted or error-free.
               </p>
             </div>
 
