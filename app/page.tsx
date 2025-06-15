@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import {
   Play,
-  Download,
   Star,
   Waves,
   CloudRain,
@@ -14,8 +13,10 @@ import {
   Lock,
   FileText,
   HelpCircle,
+  Brain,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function SaoraLanding() {
   const [isVisible, setIsVisible] = useState(false);
@@ -72,14 +73,26 @@ export default function SaoraLanding() {
       <header className="relative z-10 px-6 py-8">
         <nav className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center shadow-xl">
-              <span className="text-2xl font-bold text-white">S</span>
-            </div>
+            <Image
+              src="/sora.png"
+              alt="Saora Logo"
+              width={48}
+              height={48}
+              className="w-12 h-12"
+              priority
+            />
             <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Saora
             </span>
           </div>
           <div className="flex items-center space-x-4">
+            <Link
+              href="/faq"
+              className="flex items-center space-x-2 text-blue-200 hover:text-blue-100 transition-colors"
+            >
+              <HelpCircle className="w-5 h-5" />
+              <span>FAQ</span>
+            </Link>
             <Link
               href="/support"
               className="flex items-center space-x-2 text-blue-200 hover:text-blue-100 transition-colors"
@@ -87,9 +100,14 @@ export default function SaoraLanding() {
               <HelpCircle className="w-5 h-5" />
               <span>Support</span>
             </Link>
-            <button className="px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+            <a
+              href="https://apps.apple.com/us/app/saora-sound/id6746692484"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+            >
               Download
-            </button>
+            </a>
           </div>
         </nav>
       </header>
@@ -173,10 +191,21 @@ export default function SaoraLanding() {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <button className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full font-semibold text-lg shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-3">
-              <Download className="w-6 h-6 group-hover:animate-bounce" />
-              <span>App Store</span>
-            </button>
+            <a
+              href="https://apps.apple.com/us/app/saora-sound/id6746692484"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group transition-all duration-300 hover:scale-105"
+            >
+              <Image
+                src="/app-store-badge.svg"
+                alt="Download on the App Store"
+                width={160}
+                height={48}
+                className="h-12 w-auto"
+                priority
+              />
+            </a>
             <button className="px-8 py-4 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 font-semibold text-lg hover:bg-white/20 transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-3">
               <Play className="w-6 h-6" />
               <span>Discover</span>
@@ -215,6 +244,164 @@ export default function SaoraLanding() {
                 <p className="text-blue-100 leading-relaxed">{feature}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Solutions Section */}
+      <section className="relative z-10 px-6 py-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+              Solutions for Your Well-being
+            </h2>
+            <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+              Discover how Saora can help you with specific challenges in your
+              life
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Link
+              href="/solutions/stress-and-anxiety"
+              className="group p-8 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-3xl border border-white/10 hover:border-blue-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center mb-6 shadow-xl group-hover:scale-110 transition-transform duration-300">
+                <Brain className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-blue-300 transition-colors">
+                Stress & Anxiety
+              </h3>
+              <p className="text-blue-200 group-hover:text-blue-100 transition-colors">
+                Find peace and calm through guided sound therapy sessions
+              </p>
+            </Link>
+            <Link
+              href="/solutions/sleep"
+              className="group p-8 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-3xl border border-white/10 hover:border-blue-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center mb-6 shadow-xl group-hover:scale-110 transition-transform duration-300">
+                <Moon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-blue-300 transition-colors">
+                Sleep
+              </h3>
+              <p className="text-blue-200 group-hover:text-blue-100 transition-colors">
+                Improve your sleep quality with soothing soundscapes
+              </p>
+            </Link>
+            <Link
+              href="/solutions/emotions-and-mood"
+              className="group p-8 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-3xl border border-white/10 hover:border-blue-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center mb-6 shadow-xl group-hover:scale-110 transition-transform duration-300">
+                <Brain className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-blue-300 transition-colors">
+                Emotions & Mood
+              </h3>
+              <p className="text-blue-200 group-hover:text-blue-100 transition-colors">
+                Balance your emotions and improve your mood naturally
+              </p>
+            </Link>
+            <Link
+              href="/solutions/focus-and-mental-performance"
+              className="group p-8 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-3xl border border-white/10 hover:border-blue-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center mb-6 shadow-xl group-hover:scale-110 transition-transform duration-300">
+                <Brain className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-blue-300 transition-colors">
+                Focus & Performance
+              </h3>
+              <p className="text-blue-200 group-hover:text-blue-100 transition-colors">
+                Enhance your focus and mental performance
+              </p>
+            </Link>
+            <Link
+              href="/solutions/self-confidence-and-self-esteem"
+              className="group p-8 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-3xl border border-white/10 hover:border-blue-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center mb-6 shadow-xl group-hover:scale-110 transition-transform duration-300">
+                <Brain className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-blue-300 transition-colors">
+                Self-Confidence
+              </h3>
+              <p className="text-blue-200 group-hover:text-blue-100 transition-colors">
+                Build self-confidence and boost your self-esteem
+              </p>
+            </Link>
+            <Link
+              href="/solutions/relationships-and-communication"
+              className="group p-8 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-3xl border border-white/10 hover:border-blue-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center mb-6 shadow-xl group-hover:scale-110 transition-transform duration-300">
+                <Brain className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-blue-300 transition-colors">
+                Relationships
+              </h3>
+              <p className="text-blue-200 group-hover:text-blue-100 transition-colors">
+                Improve your relationships and communication skills
+              </p>
+            </Link>
+            <Link
+              href="/solutions/pain-management"
+              className="group p-8 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-3xl border border-white/10 hover:border-blue-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center mb-6 shadow-xl group-hover:scale-110 transition-transform duration-300">
+                <Brain className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-blue-300 transition-colors">
+                Pain Management
+              </h3>
+              <p className="text-blue-200 group-hover:text-blue-100 transition-colors">
+                Manage pain naturally through sound therapy
+              </p>
+            </Link>
+            <Link
+              href="/solutions/life-changes-and-adaptation"
+              className="group p-8 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-3xl border border-white/10 hover:border-blue-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center mb-6 shadow-xl group-hover:scale-110 transition-transform duration-300">
+                <Brain className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-blue-300 transition-colors">
+                Life Changes
+              </h3>
+              <p className="text-blue-200 group-hover:text-blue-100 transition-colors">
+                Navigate life changes and adapt with resilience
+              </p>
+            </Link>
+            <Link
+              href="/solutions/habits-and-behaviors"
+              className="group p-8 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-3xl border border-white/10 hover:border-blue-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center mb-6 shadow-xl group-hover:scale-110 transition-transform duration-300">
+                <Brain className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-blue-300 transition-colors">
+                Habits & Behaviors
+              </h3>
+              <p className="text-blue-200 group-hover:text-blue-100 transition-colors">
+                Build positive habits and transform behaviors
+              </p>
+            </Link>
+            <Link
+              href="/solutions/mental-preparation"
+              className="group p-8 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-3xl border border-white/10 hover:border-blue-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center mb-6 shadow-xl group-hover:scale-110 transition-transform duration-300">
+                <Brain className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-blue-300 transition-colors">
+                Mental Preparation
+              </h3>
+              <p className="text-blue-200 group-hover:text-blue-100 transition-colors">
+                Prepare your mind for peak performance
+              </p>
+            </Link>
           </div>
         </div>
       </section>
@@ -320,11 +507,22 @@ export default function SaoraLanding() {
               Join the Saora community and discover the power of natural sounds
               to transform your well-being
             </p>
-            <button className="group px-12 py-5 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full font-bold text-xl shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-4 mx-auto">
-              <Download className="w-7 h-7 group-hover:animate-bounce" />
-              <span>Download Now</span>
-            </button>
-            <p className="text-sm text-blue-300 mt-4">Free on the App Store</p>
+            <a
+              href="https://apps.apple.com/us/app/saora-sound/id6746692484"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-block transition-all duration-300 hover:scale-105"
+            >
+              <Image
+                src="/app-store-badge.svg"
+                alt="Download on the App Store"
+                width={200}
+                height={60}
+                className="h-16 w-auto"
+                priority
+              />
+            </a>
+            <p className="text-sm text-blue-300 mt-4">Free trial available</p>
           </div>
         </div>
       </section>
