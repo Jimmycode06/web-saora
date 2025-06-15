@@ -4,6 +4,7 @@ import { Download, Heart, Brain, Music } from "lucide-react";
 import Link from "next/link";
 import Script from "next/script";
 import { stressAndAnxietySchema } from "./schema";
+import Image from "next/image";
 
 export default function StressAndAnxietyPage() {
   return (
@@ -200,26 +201,18 @@ export default function StressAndAnxietyPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
-                    href="https://apps.apple.com/app/saora"
-                    className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full font-semibold text-lg shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-3"
-                    aria-label="Download Saora App on App Store"
+                    href="https://apps.apple.com/us/app/saora-sound/id6746692484"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group transition-all duration-300 hover:scale-105"
                   >
-                    <Download
-                      className="w-6 h-6 group-hover:animate-bounce"
-                      aria-hidden="true"
+                    <Image
+                      src="/app-store-badge.svg"
+                      alt="Download on the App Store"
+                      width={160}
+                      height={48}
+                      className="h-12 w-auto"
                     />
-                    <span>Download on App Store</span>
-                  </a>
-                  <a
-                    href="https://play.google.com/store/apps/details?id=com.saora.app"
-                    className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full font-semibold text-lg shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-3"
-                    aria-label="Download Saora App on Google Play"
-                  >
-                    <Download
-                      className="w-6 h-6 group-hover:animate-bounce"
-                      aria-hidden="true"
-                    />
-                    <span>Get it on Google Play</span>
                   </a>
                 </div>
                 <p className="text-sm text-blue-300 mt-4 text-center">
