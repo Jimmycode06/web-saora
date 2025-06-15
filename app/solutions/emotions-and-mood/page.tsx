@@ -202,9 +202,11 @@ export default function EmotionsAndMoodPage() {
                     rel="noopener noreferrer"
                     className="group transition-all duration-300 hover:scale-105"
                   >
-                    <img
+                    <Image
                       src="/app-store-badge.svg"
                       alt="Download on the App Store"
+                      width={160}
+                      height={48}
                       className="h-12 w-auto"
                     />
                   </a>
