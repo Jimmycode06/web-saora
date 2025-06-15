@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { brainSchema } from "./schema";
+import { Metadata } from "next";
 
 export default function HabitsAndBehaviors() {
   return (

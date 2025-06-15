@@ -4,6 +4,8 @@ import { Moon, Brain, Music } from "lucide-react";
 import Link from "next/link";
 import Script from "next/script";
 import { sleepSchema } from "./schema";
+import { Metadata } from "next";
+import Image from "next/image";
 
 export default function SleepPage() {
   return (
@@ -200,6 +202,14 @@ export default function SleepPage() {
                   Free trial available
                 </p>
               </section>
+
+              <Image
+                src="/solutions/sleep.jpg"
+                alt="Sleep"
+                width={800}
+                height={400}
+                className="w-full h-64 object-cover rounded-lg"
+              />
             </div>
           </article>
         </main>

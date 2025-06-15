@@ -5,6 +5,7 @@ import Link from "next/link";
 import Script from "next/script";
 import { emotionsAndMoodSchema } from "./schema";
 import Image from "next/image";
+import { Metadata } from "next";
 
 export default function EmotionsAndMoodPage() {
   return (
@@ -246,6 +247,13 @@ export default function EmotionsAndMoodPage() {
           </div>
         </footer>
       </div>
+      <Image
+        src="/solutions/emotions-and-mood.jpg"
+        alt="Emotions and Mood"
+        width={800}
+        height={400}
+        className="w-full h-64 object-cover rounded-lg"
+      />
     </>
   );
 }

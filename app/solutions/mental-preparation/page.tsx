@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { mentalPreparationSchema } from "./schema";
+import { Metadata } from "next";
 
 export default function MentalPreparation() {
   return (
@@ -121,8 +121,8 @@ export default function MentalPreparation() {
           <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
             Start Your Mental Preparation Journey Today
           </h2>
-          <p className="text-lg text-blue-100 mb-8">
-            Download Saora and unlock your full potential
+          <p className="text-lg text-gray-600 mb-8">
+            Don&apos;t let stress and anxiety hold you back.
           </p>
           <a
             href="https://apps.apple.com/us/app/saora-sound/id6746692484"

@@ -5,6 +5,7 @@ import Link from "next/link";
 import Script from "next/script";
 import { selfConfidenceAndSelfEsteemSchema } from "./schema";
 import Image from "next/image";
+import { Metadata } from "next";
 
 export default function SelfConfidenceAndSelfEsteemPage() {
   return (

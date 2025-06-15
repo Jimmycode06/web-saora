@@ -5,6 +5,7 @@ import Link from "next/link";
 import Script from "next/script";
 import { painManagementSchema } from "./schema";
 import Image from "next/image";
+import { Metadata } from "next";
 
 export default function PainManagementPage() {
   return (
@@ -204,6 +205,14 @@ export default function PainManagementPage() {
                   Free trial available
                 </p>
               </section>
+
+              <Image
+                src="/solutions/pain-management.jpg"
+                alt="Pain Management"
+                width={800}
+                height={400}
+                className="w-full h-64 object-cover rounded-lg"
+              />
             </div>
           </article>
         </main>

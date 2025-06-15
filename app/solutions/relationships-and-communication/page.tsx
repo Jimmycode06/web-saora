@@ -5,6 +5,7 @@ import Link from "next/link";
 import Script from "next/script";
 import { relationshipsAndCommunicationSchema } from "./schema";
 import Image from "next/image";
+import { Metadata } from "next";
 
 export default function RelationshipsAndCommunicationPage() {
   return (
@@ -207,6 +208,14 @@ export default function RelationshipsAndCommunicationPage() {
                   Free trial available
                 </p>
               </section>
+
+              <Image
+                src="/solutions/relationships-and-communication.jpg"
+                alt="Relationships and Communication"
+                width={800}
+                height={400}
+                className="w-full h-64 object-cover rounded-lg"
+              />
             </div>
           </article>
         </main>
