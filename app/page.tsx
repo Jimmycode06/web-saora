@@ -87,6 +87,13 @@ export default function SaoraLanding() {
           </div>
           <div className="flex items-center space-x-4">
             <Link
+              href="/blog"
+              className="flex items-center space-x-2 text-blue-200 hover:text-blue-100 transition-colors"
+            >
+              <FileText className="w-5 h-5" />
+              <span>Blog</span>
+            </Link>
+            <Link
               href="/faq"
               className="flex items-center space-x-2 text-blue-200 hover:text-blue-100 transition-colors"
             >
@@ -523,6 +530,55 @@ export default function SaoraLanding() {
               />
             </a>
             <p className="text-sm text-blue-300 mt-4">Free trial available</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Blog Section */}
+      <section className="relative z-10 px-6 py-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+              Latest Articles
+            </h2>
+            <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+              Discover expert tips and insights for better sleep and well-being
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <Link
+              href="/blog/sleep"
+              className="group p-8 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-3xl border border-white/10 hover:border-blue-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center mb-6 shadow-xl group-hover:scale-110 transition-transform duration-300">
+                <Moon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-blue-300 transition-colors">
+                Can&apos;t Sleep? Causes, Solutions, and Practical Tips
+              </h3>
+              <p className="text-blue-200 group-hover:text-blue-100 transition-colors mb-4">
+                Discover effective solutions for insomnia and sleep problems.
+                Learn about common causes, practical tips, and natural remedies
+                to improve your sleep quality.
+              </p>
+              <div className="flex items-center text-blue-300 group-hover:text-blue-200 transition-colors">
+                <span>Read more</span>
+                <svg
+                  className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
