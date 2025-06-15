@@ -1,230 +1,154 @@
-import Image from "next/image";
+"use client";
+
 import Link from "next/link";
-import { Metadata } from "next";
-import { Clock, Moon, FileText } from "lucide-react";
-
-export const metadata: Metadata = {
-  title: "Saora Blog | Tips for Better Sleep and Well-being",
-  description:
-    "Discover expert tips and insights for better sleep, meditation, and overall well-being. Learn practical solutions for common sleep problems and stress management.",
-  keywords: [
-    "sleep blog",
-    "meditation tips",
-    "well-being",
-    "sleep solutions",
-    "stress management",
-    "mental health",
-    "sleep hygiene",
-    "relaxation techniques",
-  ],
-  openGraph: {
-    title: "Saora Blog | Tips for Better Sleep and Well-being",
-    description:
-      "Discover expert tips and insights for better sleep, meditation, and overall well-being. Learn practical solutions for common sleep problems and stress management.",
-    type: "website",
-    url: "https://saora.app/blog",
-    images: [
-      {
-        url: "https://saora.app/sora.png",
-        width: 1200,
-        height: 630,
-        alt: "Saora Blog",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Saora Blog | Tips for Better Sleep and Well-being",
-    description:
-      "Discover expert tips and insights for better sleep, meditation, and overall well-being. Learn practical solutions for common sleep problems and stress management.",
-    images: ["https://saora.app/sora.png"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  alternates: {
-    canonical: "https://saora.app/blog",
-  },
-};
-
-const articles = [
-  {
-    title:
-      "Can't Sleep? Causes, Solutions, and Practical Tips to Get Better Rest",
-    description:
-      "Discover effective solutions for insomnia and sleep problems. Learn about common causes, practical tips, and natural remedies to improve your sleep quality.",
-    slug: "sleep",
-    icon: Moon,
-    readTime: "10 min read",
-    date: "March 2024",
-  },
-  // Add more articles here as they are created
-];
+import Image from "next/image";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 export default function BlogPage() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white">
-      {/* Header */}
-      <header className="relative z-10 px-6 py-8">
-        <nav className="max-w-7xl mx-auto flex items-center justify-between">
-          <Link href="/" className="flex items-center space-x-3">
+    <div className="min-h-screen bg-white">
+      {/* Mobile Navigation */}
+      <div className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
+        <div className="flex items-center justify-between p-4">
+          <Link href="/" className="flex items-center space-x-2">
             <Image
               src="/sora.png"
               alt="Saora Logo"
-              width={48}
-              height={48}
-              className="w-12 h-12"
-              priority
+              width={32}
+              height={32}
+              className="w-8 h-8"
             />
-            <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Saora
-            </span>
+            <span className="text-xl font-bold text-gray-900">Saora</span>
           </Link>
-          <div className="flex items-center space-x-4">
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="p-2 text-gray-600 hover:text-gray-900"
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+        {isMobileMenuOpen && (
+          <div className="px-4 py-2 space-y-2 border-t border-gray-200">
+            <Link
+              href="/"
+              className="block py-2 text-gray-600 hover:text-gray-900"
+            >
+              Home
+            </Link>
+            <Link
+              href="/solutions"
+              className="block py-2 text-gray-600 hover:text-gray-900"
+            >
+              Solutions
+            </Link>
             <Link
               href="/blog"
-              className="flex items-center space-x-2 text-blue-200 hover:text-blue-100 transition-colors"
+              className="block py-2 text-gray-600 hover:text-gray-900"
             >
-              <FileText className="w-5 h-5" />
-              <span>Blog</span>
+              Blog
             </Link>
             <Link
               href="/faq"
-              className="flex items-center space-x-2 text-blue-200 hover:text-blue-100 transition-colors"
+              className="block py-2 text-gray-600 hover:text-gray-900"
             >
-              <FileText className="w-5 h-5" />
-              <span>FAQ</span>
+              FAQ
             </Link>
-            <Link
-              href="/support"
-              className="flex items-center space-x-2 text-blue-200 hover:text-blue-100 transition-colors"
-            >
-              <FileText className="w-5 h-5" />
-              <span>Support</span>
-            </Link>
-            <a
-              href="https://apps.apple.com/us/app/saora-sound/id6746692484"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
-            >
-              Download
-            </a>
           </div>
-        </nav>
-      </header>
+        )}
+      </div>
+
+      {/* Desktop Navigation */}
+      <nav className="hidden lg:flex items-center justify-between p-6 bg-white border-b border-gray-200">
+        <Link href="/" className="flex items-center space-x-2">
+          <Image
+            src="/sora.png"
+            alt="Saora Logo"
+            width={32}
+            height={32}
+            className="w-8 h-8"
+          />
+          <span className="text-xl font-bold text-gray-900">Saora</span>
+        </Link>
+        <div className="flex items-center space-x-8">
+          <Link href="/" className="text-gray-600 hover:text-gray-900">
+            Home
+          </Link>
+          <Link href="/solutions" className="text-gray-600 hover:text-gray-900">
+            Solutions
+          </Link>
+          <Link href="/blog" className="text-gray-600 hover:text-gray-900">
+            Blog
+          </Link>
+          <Link href="/faq" className="text-gray-600 hover:text-gray-900">
+            FAQ
+          </Link>
+        </div>
+      </nav>
 
       {/* Main Content */}
-      <main className="relative z-10 px-6 py-12">
-        <div className="max-w-6xl mx-auto">
-          <header className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-              Saora Blog
-            </h1>
-            <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-              Discover expert tips and insights for better sleep, meditation,
-              and overall well-being
-            </p>
-          </header>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {articles.map((article) => {
-              const Icon = article.icon;
-              return (
-                <Link
-                  key={article.slug}
-                  href={`/blog/${article.slug}`}
-                  className="group p-8 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-3xl border border-white/10 hover:border-blue-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center mb-6 shadow-xl group-hover:scale-110 transition-transform duration-300">
-                    <Icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h2 className="text-2xl font-bold mb-3 text-white group-hover:text-blue-300 transition-colors">
-                    {article.title}
-                  </h2>
-                  <p className="text-blue-200 group-hover:text-blue-100 transition-colors mb-4">
-                    {article.description}
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-4 text-blue-300">
-                      <span className="flex items-center">
-                        <Clock className="w-4 h-4 mr-2" />
-                        {article.readTime}
-                      </span>
-                      <span>•</span>
-                      <span>{article.date}</span>
-                    </div>
-                    <div className="flex items-center text-blue-300 group-hover:text-blue-200 transition-colors">
-                      <span>Read more</span>
-                      <svg
-                        className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 5l7 7-7 7"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
+      <main className="container mx-auto px-4 py-8 lg:py-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">Blog</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <Link href="/blog/sleep" className="group">
+            <article className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 group-hover:scale-105">
+              <div className="relative h-48">
+                <Image
+                  src="/sora.png"
+                  alt="Sleep Tips"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h2 className="text-xl font-semibold text-gray-900 mb-2">
+                  Sleep Tips
+                </h2>
+                <p className="text-gray-600">
+                  Discover effective strategies for better sleep and improved
+                  well-being.
+                </p>
+              </div>
+            </article>
+          </Link>
+          {/* Add more blog posts here */}
         </div>
       </main>
 
       {/* Footer */}
-      <footer className="relative z-10 px-6 py-12 border-t border-white/10 mt-12">
-        <div className="max-w-6xl mx-auto text-center">
-          <div className="flex items-center justify-center space-x-3 mb-6">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center">
-              <span className="text-lg font-bold text-white">S</span>
+      <footer className="bg-gray-50 border-t border-gray-200 mt-16">
+        <div className="container mx-auto px-4 py-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex items-center space-x-2 mb-4 md:mb-0">
+              <Image
+                src="/sora.png"
+                alt="Saora Logo"
+                width={32}
+                height={32}
+                className="w-8 h-8"
+              />
+              <span className="text-xl font-bold text-gray-900">Saora</span>
             </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Saora
-            </span>
+            <div className="flex space-x-6">
+              <Link href="/" className="text-gray-600 hover:text-gray-900">
+                Home
+              </Link>
+              <Link
+                href="/solutions"
+                className="text-gray-600 hover:text-gray-900"
+              >
+                Solutions
+              </Link>
+              <Link href="/blog" className="text-gray-600 hover:text-gray-900">
+                Blog
+              </Link>
+              <Link href="/faq" className="text-gray-600 hover:text-gray-900">
+                FAQ
+              </Link>
+            </div>
           </div>
-          <p className="text-blue-200 mb-4">
-            Your companion for relaxation and well-being
-          </p>
-          <div className="flex justify-center space-x-6 mb-4">
-            <Link
-              href="/privacy-policy"
-              className="text-blue-300 hover:text-blue-200 transition-colors text-sm"
-            >
-              Privacy Policy
-            </Link>
-            <span className="text-blue-400">•</span>
-            <Link
-              href="/terms-of-use"
-              className="text-blue-300 hover:text-blue-200 transition-colors text-sm"
-            >
-              Terms of Use
-            </Link>
-            <span className="text-blue-400">•</span>
-            <Link
-              href="/support"
-              className="text-blue-300 hover:text-blue-200 transition-colors text-sm"
-            >
-              Support
-            </Link>
-          </div>
-          <p className="text-blue-300 text-sm">
-            © 2024 Saora. All rights reserved.
-          </p>
         </div>
       </footer>
     </div>

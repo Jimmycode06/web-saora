@@ -14,6 +14,8 @@ import {
   FileText,
   HelpCircle,
   Brain,
+  Menu,
+  X,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -21,6 +23,7 @@ import Image from "next/image";
 export default function SaoraLanding() {
   const [isVisible, setIsVisible] = useState(false);
   const [activeSound, setActiveSound] = useState<number | null>(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
@@ -70,9 +73,9 @@ export default function SaoraLanding() {
       </div>
 
       {/* Header */}
-      <header className="relative z-10 px-6 py-8">
+      <header className="relative z-50 px-6 py-8">
         <nav className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center space-x-3">
+          <Link href="/" className="flex items-center space-x-3">
             <Image
               src="/sora.png"
               alt="Saora Logo"
@@ -84,8 +87,10 @@ export default function SaoraLanding() {
             <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Saora
             </span>
-          </div>
-          <div className="flex items-center space-x-4">
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-4">
             <Link
               href="/blog"
               className="flex items-center space-x-2 text-blue-200 hover:text-blue-100 transition-colors"
@@ -116,7 +121,60 @@ export default function SaoraLanding() {
               Download
             </a>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden p-2 text-blue-200 hover:text-blue-100 transition-colors"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
+          </button>
         </nav>
+
+        {/* Mobile Navigation */}
+        <div
+          className={`fixed inset-0 bg-slate-900/95 backdrop-blur-sm z-40 transition-transform duration-300 ease-in-out ${
+            isMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          <div className="flex flex-col items-center justify-center h-full space-y-8">
+            <Link
+              href="/blog"
+              className="text-2xl text-blue-200 hover:text-blue-100 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Blog
+            </Link>
+            <Link
+              href="/faq"
+              className="text-2xl text-blue-200 hover:text-blue-100 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              FAQ
+            </Link>
+            <Link
+              href="/support"
+              className="text-2xl text-blue-200 hover:text-blue-100 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Support
+            </Link>
+            <a
+              href="https://apps.apple.com/us/app/saora-sound/id6746692484"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 text-xl"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Download
+            </a>
+          </div>
+        </div>
       </header>
 
       {/* Hero Section */}
