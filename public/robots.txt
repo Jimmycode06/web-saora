@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://saora.app/sitemap.xml
+Sitemap: https://web-saora.vercel.app/sitemap.xml
 
 # Optimize crawling
 Crawl-delay: 10
