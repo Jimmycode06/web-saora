@@ -1,14 +1,14 @@
 export default function Home() {
   return (
     <div className="w-full">
-      {/* Hero Section avec animation */}
+      {/* Hero Section with animation */}
       <section className="relative w-full min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden">
-        {/* Effet de fond animé */}
+        {/* Animated background effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-indigo-900/20 animate-pulse"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.3),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(120,119,198,0.3),transparent_50%)]"></div>
         
-        {/* Contenu principal */}
+        {/* Main content */}
         <div className="relative z-10 flex flex-col items-center text-center gap-8 max-w-5xl mx-auto">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-400/30 rounded-full backdrop-blur-sm">
@@ -16,19 +16,19 @@ export default function Home() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
             </span>
-            <span className="text-blue-300 text-sm font-medium">Disponible maintenant</span>
+            <span className="text-blue-300 text-sm font-medium">Available Now</span>
           </div>
 
-          {/* Titre principal avec effet de gradient */}
+          {/* Main title with gradient effect */}
           <h1 className="text-6xl sm:text-7xl md:text-8xl font-black tracking-tight">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 animate-gradient-x">
               Saora Sound
             </span>
           </h1>
 
-          {/* Sous-titre */}
+          {/* Subtitle */}
           <p className="text-xl sm:text-2xl md:text-3xl text-white/90 max-w-3xl leading-relaxed font-light">
-            L&apos;application de sons immersifs, musiques relaxantes et méditations guidées pour le calme, la concentration et le bien-être.
+            Immersive sounds, relaxing music, and guided meditations for calm, focus, and well-being.
           </p>
 
           {/* CTA Buttons */}
@@ -37,7 +37,7 @@ export default function Home() {
               href="#"
               className="group relative inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-full shadow-2xl shadow-blue-500/50 transition-all duration-300 hover:scale-105 hover:shadow-blue-500/70"
             >
-              <span>Télécharger l&apos;app</span>
+              <span>Download App</span>
               <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
@@ -46,14 +46,14 @@ export default function Home() {
               href="#features"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-full backdrop-blur-sm border border-white/20 transition-all duration-300 hover:scale-105"
             >
-              <span>Découvrir</span>
+              <span>Discover</span>
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </a>
           </div>
 
-          {/* Stats ou avis */}
+          {/* Stats or reviews */}
           <div className="flex flex-wrap items-center justify-center gap-8 mt-12 text-white/80">
             <div className="flex items-center gap-2">
               <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -65,14 +65,14 @@ export default function Home() {
               <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <span className="font-semibold">+50 000 utilisateurs</span>
+              <span className="font-semibold">+50,000 users</span>
             </div>
             <div className="flex items-center gap-2">
               <svg className="w-5 h-5 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
                 <path fillRule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clipRule="evenodd" />
               </svg>
-              <span className="font-semibold">+200 sons</span>
+              <span className="font-semibold">+200 sounds</span>
             </div>
           </div>
         </div>
@@ -90,10 +90,10 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-              Pourquoi choisir <span className="text-blue-400">Saora Sound</span> ?
+              Why choose <span className="text-blue-400">Saora Sound</span>?
             </h2>
             <p className="text-xl text-white/70 max-w-2xl mx-auto">
-              Une expérience audio exceptionnelle pour votre bien-être au quotidien
+              An exceptional audio experience for your daily well-being
             </p>
           </div>
 
@@ -108,9 +108,9 @@ export default function Home() {
                     <circle cx="12" cy="17" r="2" fill="white" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-3">Sons immersifs</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">Immersive Sounds</h3>
                 <p className="text-white/70 leading-relaxed">
-                  Plongez dans des ambiances naturelles et relaxantes. De la forêt tropicale aux vagues océaniques, chaque son est soigneusement sélectionné pour votre bien-être.
+                  Dive into natural and relaxing atmospheres. From tropical forests to ocean waves, each sound is carefully selected for your well-being.
                 </p>
               </div>
             </div>
@@ -124,9 +124,9 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6Zm2 0v12h12V6H6Zm3 4h6v2H9v-2Z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-3">Aucune publicité</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">No Ads</h3>
                 <p className="text-white/70 leading-relaxed">
-                  Profitez d&apos;une expérience sans interruption. Focus total sur votre relaxation et votre bien-être, sans aucune distraction.
+                  Enjoy an uninterrupted experience. Total focus on your relaxation and well-being, with no distractions.
                 </p>
               </div>
             </div>
@@ -140,9 +140,9 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 2a1 1 0 0 1 1 1v8.59l3.3 3.3a1 1 0 0 1-1.42 1.42l-3.59-3.59A1 1 0 0 1 11 12V3a1 1 0 0 1 1-1Zm0 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-3">Nouveaux sons chaque semaine</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">New Sounds Every Week</h3>
                 <p className="text-white/70 leading-relaxed">
-                  Découvrez régulièrement de nouveaux contenus. Notre équipe ajoute constamment de nouvelles ambiances pour enrichir votre expérience.
+                  Discover new content regularly. Our team constantly adds new atmospheres to enrich your experience.
                 </p>
               </div>
             </div>
@@ -154,28 +154,28 @@ export default function Home() {
       <section className="w-full py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            Votre bien-être, notre priorité
+            Your well-being, our priority
           </h2>
           <p className="text-xl text-white/80 leading-relaxed mb-8">
-            Saora Sound vous accompagne au quotidien pour retrouver le calme, améliorer votre concentration ou simplement profiter d&apos;une ambiance sonore apaisante. Sons naturels, musiques douces et méditations guidées sont réunis pour votre bien-être.
+            Saora Sound accompanies you daily to find calm, improve your concentration, or simply enjoy a soothing soundscape. Natural sounds, gentle music, and guided meditations are brought together for your well-being.
           </p>
           <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full border border-white/10">
             <svg className="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
-            <span className="text-white font-semibold">Scientifiquement prouvé</span>
+            <span className="text-white font-semibold">Scientifically Proven</span>
           </div>
         </div>
       </section>
 
-      {/* CTA Final Section */}
+      {/* Final CTA Section */}
       <section className="w-full py-24 px-4 bg-gradient-to-b from-transparent to-blue-950/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            Prêt à commencer votre voyage ?
+            Ready to start your journey?
           </h2>
           <p className="text-xl text-white/70 mb-10 max-w-2xl mx-auto">
-            Rejoignez des milliers d&apos;utilisateurs qui ont transformé leur quotidien avec Saora Sound.
+            Join thousands of users who have transformed their daily lives with Saora Sound.
           </p>
           <a
             href="#"
@@ -184,7 +184,7 @@ export default function Home() {
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
               <path d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" />
             </svg>
-            <span>Télécharger maintenant</span>
+            <span>Download Now</span>
             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
@@ -195,8 +195,8 @@ export default function Home() {
       {/* Contact Section */}
       <section className="w-full py-16 px-4 border-t border-white/10">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Une question ?</h2>
-          <p className="text-white/70 mb-6">Notre équipe est là pour vous aider</p>
+          <h2 className="text-3xl font-bold text-white mb-4">Have a question?</h2>
+          <p className="text-white/70 mb-6">Our team is here to help you</p>
           <a
             href="mailto:x10millionmarketing@gmail.com"
             className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 text-lg font-semibold transition-colors"
