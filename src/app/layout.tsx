@@ -3,8 +3,40 @@ import Link from "next/link";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Saora Sound",
-  description: "Application de sons, musique et méditation pour le bien-être.",
+  title: "Saora Sound - Relaxing Sleep Sounds & White Noise App",
+  description: "Fall asleep faster with relaxing sounds, white noise, and guided meditations. Improve sleep quality with Saora Sound's immersive audio experience. Download now for better sleep.",
+  keywords: "sleep sounds, white noise, relaxing sounds, fall asleep faster, sleep app, insomnia, meditation, deep sleep, sleep quality, bedtime routine, stress relief, anxiety sleep",
+  authors: [{ name: "Saora Sound" }],
+  creator: "Saora Sound",
+  publisher: "Saora Sound",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://web-saora.vercel.app",
+    title: "Saora Sound - Relaxing Sleep Sounds & White Noise App",
+    description: "Fall asleep faster with relaxing sounds, white noise, and guided meditations. Improve sleep quality with Saora Sound.",
+    siteName: "Saora Sound",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Saora Sound - Relaxing Sleep Sounds & White Noise App",
+    description: "Fall asleep faster with relaxing sounds, white noise, and guided meditations.",
+    creator: "@SaoraSound",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "google-site-verification-code",
+  },
 };
 
 export default function RootLayout({

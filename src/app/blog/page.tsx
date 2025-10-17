@@ -1,6 +1,9 @@
+import Link from "next/link";
+
 export default function Blog() {
   const articles = [
     {
+      slug: "why-cant-i-fall-asleep",
       title: "Why Can't I Fall Asleep Even When I'm Tired?",
       excerpt: "Discover the common reasons behind sleeplessness and how relaxing sounds can help you achieve better sleep quality.",
       category: "Sleep Science",
@@ -8,6 +11,7 @@ export default function Blog() {
       date: "January 15, 2025",
     },
     {
+      slug: "science-of-white-noise",
       title: "The Science of White Noise: How It Improves Your Sleep",
       excerpt: "Learn how white noise masks disruptive sounds and helps you fall asleep faster and stay asleep longer.",
       category: "Sleep Science",
@@ -15,6 +19,7 @@ export default function Blog() {
       date: "January 12, 2025",
     },
     {
+      slug: "best-bedtime-habits",
       title: "10 Best Bedtime Habits to Fall Asleep Faster",
       excerpt: "Transform your sleep routine with these proven techniques for better sleep quality and faster sleep onset.",
       category: "Sleep Tips",
@@ -22,6 +27,7 @@ export default function Blog() {
       date: "January 10, 2025",
     },
     {
+      slug: "stop-overthinking-at-night",
       title: "How to Stop Overthinking When You're in Bed",
       excerpt: "Practical techniques to quiet your mind at night and let relaxing sounds guide you to peaceful sleep.",
       category: "Mental Health",
@@ -29,6 +35,7 @@ export default function Blog() {
       date: "January 8, 2025",
     },
     {
+      slug: "screen-time-sleep-impact",
       title: "The Impact of Screen Time on Your Sleep Quality",
       excerpt: "Understand how blue light affects your circadian rhythm and discover healthier bedtime alternatives.",
       category: "Sleep Science",
@@ -36,6 +43,7 @@ export default function Blog() {
       date: "January 5, 2025",
     },
     {
+      slug: "anxiety-sleep-issues",
       title: "Can Anxiety Really Cause Sleep Issues?",
       excerpt: "Explore the connection between stress, anxiety, and insomnia, plus effective solutions for better rest.",
       category: "Mental Health",
@@ -43,6 +51,7 @@ export default function Blog() {
       date: "January 3, 2025",
     },
     {
+      slug: "ultimate-guide-deep-sleep",
       title: "The Ultimate Guide to Deep Sleep",
       excerpt: "Everything you need to know about achieving deep, restorative sleep for optimal health and well-being.",
       category: "Sleep Science",
@@ -50,6 +59,7 @@ export default function Blog() {
       date: "December 30, 2024",
     },
     {
+      slug: "how-many-hours-sleep",
       title: "How Many Hours of Sleep Do You Really Need?",
       excerpt: "Debunking sleep myths and discovering the optimal sleep duration for your age and lifestyle.",
       category: "Sleep Science",
@@ -57,6 +67,7 @@ export default function Blog() {
       date: "December 28, 2024",
     },
     {
+      slug: "natural-sleep-aids",
       title: "Natural Sleep Aids: Herbal Teas, Meditation, and More",
       excerpt: "Explore natural alternatives to sleeping pills and how they can improve your sleep quality safely.",
       category: "Natural Remedies",
@@ -64,6 +75,7 @@ export default function Blog() {
       date: "December 25, 2024",
     },
     {
+      slug: "perfect-sleep-environment",
       title: "Creating the Perfect Sleep Environment",
       excerpt: "Tips for optimizing your bedroom for better sleep, from temperature to lighting to soundscapes.",
       category: "Sleep Tips",
@@ -106,15 +118,15 @@ export default function Blog() {
             </p>
             <div className="flex items-center justify-between">
               <span className="text-white/50 text-sm">{articles[0].date}</span>
-              <a
-                href="#"
+              <Link
+                href={`/blog/${articles[0].slug}`}
                 className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-semibold transition-colors"
               >
                 Read more
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -132,20 +144,22 @@ export default function Blog() {
                 </span>
                 <span className="text-white/50 text-xs">{article.readTime}</span>
               </div>
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
-                {article.title}
-              </h3>
+              <Link href={`/blog/${article.slug}`}>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                  {article.title}
+                </h3>
+              </Link>
               <p className="text-white/60 text-sm mb-4 leading-relaxed">
                 {article.excerpt}
               </p>
               <div className="flex items-center justify-between pt-4 border-t border-white/10">
                 <span className="text-white/40 text-xs">{article.date}</span>
-                <a
-                  href="#"
+                <Link
+                  href={`/blog/${article.slug}`}
                   className="text-blue-400 hover:text-blue-300 text-sm font-semibold transition-colors"
                 >
                   Read →
-                </a>
+                </Link>
               </div>
             </article>
           ))}
