@@ -43,10 +43,10 @@ export default function Home() {
               </svg>
             </a>
             <a
-              href="#features"
+              href="/blog"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-full backdrop-blur-sm border border-white/20 transition-all duration-300 hover:scale-105"
             >
-              <span>Discover</span>
+              <span>Read Blog</span>
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
@@ -193,7 +193,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section className="w-full py-16 px-4 border-t border-white/10">
+      <section id="contact" className="w-full py-16 px-4 border-t border-white/10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Have a question?</h2>
           <p className="text-white/70 mb-6">Our team is here to help you</p>
